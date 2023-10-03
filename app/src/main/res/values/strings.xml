@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name" translatable="false">PersonalFinance</string>
+    <string name="Home">Home</string>
+    <string name="Message">Message</string>
+    <string name="Heart">Heart</string>
+    <string name="Person">Person</string>
+    <string name="Plus">Plus</string>
+    <string name="Calendar">Calendar</string>
+    <string name="Settings">Settings</string>
+    <string name="Laptop">Laptop</string>
+    <string name="Circle">Circle</string>
+    <string name="Drop">Drop</string>
+    <string name="Leaf">Leaf</string>
+    <string name="Dashboard">Dashboard</string>
+    <string name="Analytics">Analytics</string>
+    <string name="Create">Create</string>
+    <string name="Budget">Budget</string>
+    <string name="currency">Currency</string>
+    <string name="transaction_history">Transaction History</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="term_of_service">Term of Service</string>
+    <string name="preference">Preference</string>
+    <string name="no_bill_reminder_at_the_moment">No Bill reminder at the Moment.</string>
+    <string name="merchant">Merchant</string>
+    <string name="address">Address</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="category">Category</string>
+    <string name="total">Total</string>
+    <string name="submit">Submit</string>
+    <string name="transaction_no">Transaction No.</string>
+    <string name="add_transaction">Add Transaction</string>
+    <string name="no_enough_data_yet">No Enough Data yet!</string>
+    <string name="your_financial_analytics_will_become_available_as_you_start_recording_expenses">Your financial analytics will become available as you start recording expenses</string>
+    <string name="transaction">Transaction</string>
+    <string name="budget_description">Set spending limits to save money\nand stay on top of your finances.</string>
+    <string name="budget_tracker">Budget Tracker</string>
+    <string name="overspent">Overspent: %1$s</string>
+    <string name="remaining">Remaining: %1$s</string>
+    <string name="budget_limit">Budget Limit</string>
+    <string name="budget_reset_period">Budget Reset Period</string>
+    <string name="let_s_get_organized_set_your_budget">Let\'s Get Organized: Set Your Budget</string>
+    <string name="savings">Savings</string>
+    <string name="notification">Notification</string>
+    <string name="today_s_spending">Today\'s Spending</string>
+    <string name="see_all">See all</string>
+    <string name="get_started_desc">Your financial journey begins here! Start by adding transactions, setting savings goals, and managing your budget to achieve your financial goals.</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_bill_reminder">Add Bill Reminder</string>
+    <string name="notification_empty_message">Enjoy the Silence! No Notifications at the Moment.</string>
+    <string name="goal_date">Goal Date</string>
+    <string name="saving_empty_desc">Dream Big! Set Up Your Savings Goals</string>
+    <string name="goal_amount">Goal Amount</string>
+    <string name="title">Title</string>
+    <string name="saving_desc">Create new plan and save\ntowards that big goal.</string>
+    <string name="saving_goals">Saving goals</string>
+    <string name="language">Language</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="bill_reminders">Bill Reminders</string>
+    <string name="about">About</string>
+    <string name="help_security">Help &amp; Security</string>
+    <string name="content">Content</string>
+    <string name="en" translatable="false">English</string>
+    <string name="ja" translatable="false">日本語</string>
+    <string name="es" translatable="false">Español</string>
+    <string name="de" translatable="false">Deutsch</string>
+    <string name="ko" translatable="false">한국인</string>
+    <string name="reset_default">Reset Default</string>
+    <string name="you_don_t_have_transaction_added_at_the_moment">You don\'t have transaction added at the moment!</string>
+</resources>

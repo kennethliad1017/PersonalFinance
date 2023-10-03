@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_package = "com.differentshadow.personalfinance";
+option java_multiple_files = true;
+
+message UserPreferences  {
+  string preferLanguage = 1;
+  string preferCurrency = 2;
+
+  enum DarkThemeConfigProto {
+    SYSTEM_DEFAULT = 0;
+    LIGHT = 1;
+    DARK = 2;
+  }
+
+  DarkThemeConfigProto dark_theme_config = 3;
+}
