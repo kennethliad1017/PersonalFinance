@@ -9,7 +9,10 @@ Illustration used in this project are sourced from [Storyset](https://storyset.c
 - [About](#about)
 - [Features](#features)
 - [Screenshots](#screenshots)
+- [Demo](#demo)
 - [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [System Requirements](#system-requirements)
@@ -21,12 +24,7 @@ PersonalFinance offers essential financial tools, including bill reminders, expe
 
 ## Features
 
-List the key features and functionalities of your app:
-    - Expense Tracker
-    - Budget Limit
-    - Bill Reminder (Notification WIP)
-    - Saving Goals
-    - Real-Time Currency Conversion (WIP)
+List the key features and functionalities of your app: - Expense Tracker - Budget Limit - Bill Reminder (Notification WIP) - Saving Goals - Real-Time Currency Conversion (WIP)
 
 ## Screenshots
 
@@ -37,11 +35,16 @@ Include a few screenshots or images showcasing your app's user interface. This s
 ![Screenshot 1](/screenshots/budget.png)
 ![Screenshot 2](/screenshots/savings.png)
 
+## Demo
+
+You can download the demo of this project at [Demo](/app/release/personalfinance.apk).
+
 ## Getting Started
 
 This section will guide you through the process of setting up and running the project on your local machine. Please follow these steps to get started.
 
 ### Prerequisites
+
 List any prerequisites or requirements that users and developers need to have installed before using your app. Include links or instructions for installing them.
 
 - [Android Studio][1]
@@ -68,22 +71,24 @@ Follow these steps to clone the project and set it up locally:
 - Minimum supported Android version: Android 5.0 (Lollipop, API 21)
 
 ## Technologies Used
+
 List of technologies, frameworks, and libraries used in this project. Provided links to their official websites or documentation.
-* [Jetpack Compose][10]
-* [LiveData][3]
-* [ViewModel][4]
-* [Hilt for Android][5]
-* [Asynchronous Flow][7]
-* [Room Database][6]
-* [Navigation][8]
+
+- [Jetpack Compose][10]
+- [LiveData][3]
+- [ViewModel][4]
+- [Hilt for Android][5]
+- [Asynchronous Flow][7]
+- [Room Database][6]
+- [Navigation][8]
 
 [1]: https://developer.android.com/studio
 [2]: https://developer.android.com/topic/libraries/architecture
 [3]: https://developer.android.com/topic/libraries/architecture/livedata
 [4]: https://developer.android.com/topic/libraries/architecture/viewmodel
 [5]: https://developer.android.com/training/dependency-injection/hilt-android
-[6]:https://developer.android.com/training/data-storage/room
+[6]: https://developer.android.com/training/data-storage/room
 [7]: https://kotlinlang.org/docs/flow.html
 [8]: https://developer.android.com/jetpack/compose/navigation
 [9]: https://www.oracle.com/java/technologies/downloads/
-[10]:https://developer.android.com/jetpack/compose
+[10]: https://developer.android.com/jetpack/compose
