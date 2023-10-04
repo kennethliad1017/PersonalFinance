@@ -27,7 +27,8 @@ PersonalFinance offers essential financial tools, including bill reminders, expe
 List the key features and functionalities of your app: 
 - Expense Tracker
 - Budget Limit
-- Bill Reminder (Notification WIP) - Saving Goals
+- Bill Reminder (Notification WIP)
+- Saving Goals
 - Real-Time Currency Conversion (WIP)
 
 ## Screenshots
