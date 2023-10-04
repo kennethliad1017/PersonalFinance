@@ -10,14 +10,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.imePadding
-import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.layout.width
@@ -32,9 +28,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.NavigationBarDefaults
 import androidx.compose.material3.NavigationBarItem
-import androidx.compose.material3.NavigationBarItemColors
 import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
@@ -61,6 +55,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.differentshadow.personalfinance.R
 import com.differentshadow.personalfinance.domain.model.HomeUiState
+import com.differentshadow.personalfinance.domain.model.SavingGoalEntity
 import com.differentshadow.personalfinance.ui.colorButtons
 import com.differentshadow.personalfinance.ui.components.items
 import com.differentshadow.personalfinance.ui.customanimation.AnimatedNavigationBar
@@ -71,6 +66,7 @@ import com.differentshadow.personalfinance.ui.customanimation.colorbuttons.Color
 import com.differentshadow.personalfinance.ui.theme.PersonalFinanceTheme
 import com.differentshadow.personalfinance.ui.theme.PoppinsFamily
 import com.differentshadow.personalfinance.utils.CalendarUiModel
+import com.differentshadow.personalfinance.utils.Categories
 import com.differentshadow.personalfinance.utils.toCurrency
 import com.differentshadow.personalfinance.utils.toDateString
 import java.text.NumberFormat
@@ -79,9 +75,9 @@ import java.util.Currency
 
 
 @Composable
-fun ExpenseCard(title: String, text: String, cardModifier: Modifier = Modifier) {
+fun ExpenseCard(title: String, text: String, modifier: Modifier = Modifier) {
     Row(
-        modifier = cardModifier,
+        modifier = modifier,
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -437,60 +433,18 @@ fun HomeScreen(
             ) {
                 item {
                     if (uiState.overviewGoals.isEmpty()) {
-                        //                        Column (
-                        //                            horizontalAlignment = Alignment.CenterHorizontally,
-                        //                        ) {
-                        //                            Text(text = stringResource(R.string.get_started_desc), fontFamily = PoppinsFamily, style = MaterialTheme.typography.bodyMedium, textAlign = TextAlign.Center)
-                        //                            TextButton(onClick = { onNavigateRoute("saving") }) {
-                        //                                Text(text = "Add Goal")
-                        //                            }
-                        //                        }
-                        Card(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clickable {
-                                    onNavigateToSaving(9012L)
-                                },
-                            colors = CardDefaults.elevatedCardColors(),
-                            elevation = CardDefaults.elevatedCardElevation(
-                                defaultElevation = 4.dp
-                            )
+                        Column(
+                            horizontalAlignment = Alignment.CenterHorizontally,
                         ) {
-                            SavingItem(
-                                modifier = Modifier
-                                    .background(
-                                        color = Color.Transparent,
-                                        shape = RoundedCornerShape(4.dp)
-                                    )
-                                    .padding(horizontal = 8.dp, vertical = 12.dp),
-                                title = "Travel to Europe",
-                                currentAmount = 2000.0,
-                                goalAmount = 12000.0
+                            Text(
+                                text = stringResource(R.string.get_started_desc),
+                                fontFamily = PoppinsFamily,
+                                style = MaterialTheme.typography.bodyMedium,
+                                textAlign = TextAlign.Center
                             )
-                        }
-                        Spacer(Modifier.height(12.dp))
-                        Card(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clickable {
-                                    onNavigateToSaving(9012L)
-                                },
-                            colors = CardDefaults.elevatedCardColors(),
-                            elevation = CardDefaults.elevatedCardElevation(
-                                defaultElevation = 4.dp
-                            )
-                        ) {
-                            SavingItem(
-                                modifier = Modifier
-                                    .background(
-                                        color = Color.Transparent,
-                                        shape = RoundedCornerShape(4.dp)
-                                    )
-                                    .padding(horizontal = 8.dp, vertical = 12.dp),
-                                title = "Car",
-                                currentAmount = 7000.0,
-                                goalAmount = 32000.0
-                            )
+                            TextButton(onClick = { onNavigateRoute("saving") }) {
+                                Text(text = "Add Goal")
+                            }
                         }
                     }
                 }
@@ -531,7 +485,30 @@ fun HomePreview() {
     PersonalFinanceTheme {
         Surface(modifier = Modifier.fillMaxSize(1.0f)) {
             HomeScreen(
-                uiState = HomeUiState(),
+                uiState = HomeUiState(
+                    overviewGoals = listOf(
+                        SavingGoalEntity(
+                            id = 1L,
+                            title = "Travel to Europe",
+                            category = Categories.Travel.title,
+                            currentSaving = 2000.0,
+                            goalSaving = 12000.0,
+                            goalDate = "Fri 14, Jun 2024",
+                            isDeleted = false,
+                            createdAt = "Fri 15, Sep 2023"
+                        ),
+                        SavingGoalEntity(
+                            id = 2L,
+                            title = "Buy Car",
+                            category = Categories.Transportation.title,
+                            currentSaving = 7000.0,
+                            goalSaving = 32000.0,
+                            goalDate = "Sat 17, Oct 2026",
+                            isDeleted = false,
+                            createdAt = "Fri 15, Sep 2023"
+                        )
+                    )
+                ),
                 preferCurrency = NumberFormat.getCurrencyInstance().currency,
                 onNavigateToSaving = { /*TODO*/ },
                 tabNavigate = { /*TODO*/ },
