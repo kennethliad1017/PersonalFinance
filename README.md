@@ -42,7 +42,7 @@ Include a few screenshots or images showcasing your app's user interface. This s
 
 ## Demo
 
-You can download the demo of this project at [Demo](/app/release/personalfinance.apk).
+You can download the demo of this project at [Demo](https://github.com/kennethliad1017/PersonalFinance/raw/main/app/release/app/release/personalfinance.apk).
 
 ## Getting Started
 
