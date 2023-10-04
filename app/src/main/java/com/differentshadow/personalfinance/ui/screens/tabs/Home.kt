@@ -361,7 +361,7 @@ fun HomeScreen(
 
             ExpenseCard(
                 title = stringResource(id = R.string.today_s_spending),
-                text = uiState.currentExpenses.toCurrency(preferCurrency), cardModifier = Modifier
+                text = uiState.currentExpenses.toCurrency(preferCurrency), modifier = Modifier
                     .background(
                         color = MaterialTheme.colorScheme.tertiaryContainer,
                         shape = RoundedCornerShape(8.dp)
