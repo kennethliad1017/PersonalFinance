@@ -13,6 +13,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -20,9 +21,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.differentshadow.personalfinance.R
 import com.differentshadow.personalfinance.ui.components.RichText
+import com.differentshadow.personalfinance.ui.theme.PersonalFinanceTheme
 
 @Composable
 fun AboutScreen(
@@ -46,7 +49,7 @@ fun AboutScreen(
                 }
 
                 Text(
-                    text = "About MoneyWise",
+                    text = "About PersonalFinance",
                     style = MaterialTheme.typography.bodyLarge,
                     modifier = Modifier.weight(1f, true),
                     textAlign = TextAlign.Center,
@@ -70,7 +73,7 @@ fun AboutScreen(
             )
 
             Text(
-                text = "MoneyWise: Personal Finance Manager is your all-in-one financial companion. It helps you manage your finances with ease and provides essential tools for tracking expenses, setting budgets, achieving savings goals, and ensuring you never miss a bill payment.",
+                text = "Personal Finance Manager is your all-in-one financial companion. It helps you manage your finances with ease and provides essential tools for tracking expenses, setting budgets, achieving savings goals, and ensuring you never miss a bill payment.",
                 style = MaterialTheme.typography.bodyLarge,
                 modifier = Modifier.padding(bottom = 16.dp)
             )
@@ -93,6 +96,17 @@ fun AboutScreen(
 //                style = MaterialTheme.typography.bodyLarge,
 //                modifier = Modifier.padding(bottom = 16.dp)
 //            )
+        }
+    }
+}
+
+
+@Preview(showBackground = true, device = "id:pixel_7_pro", apiLevel = 33)
+@Composable
+fun AboutScreenPreview() {
+    PersonalFinanceTheme {
+        Surface(modifier = Modifier.fillMaxSize(1.0f)) {
+            AboutScreen(onNavigateBack = { /*TODO*/ })
         }
     }
 }
